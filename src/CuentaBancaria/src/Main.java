@@ -8,16 +8,23 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         Cuenta cuenta = new Cuenta();
-        Cuenta cuenta2 = new Cuenta(127863, "Nicole Chavez", 10000);
+//        Cuenta cuenta2 = new Cuenta(127863, "Javier", 10000);
 
         //Llenando la clase
 
-        cuenta.numeroCuenta = 654321;
-        cuenta.titularCuenta = "Javier Alcántara";
-        cuenta.saldoCuenta = 10000;
+        cuenta.setNumeroCuenta(123213);
+        cuenta.setTitularCuenta("Javier Alcántara");
+        cuenta.setSaldoCuenta(10000);
 
         cuenta.mostrarInformacionCuentaCoriente();
-        cuenta2.mostrarInformacionCuentaCoriente();
+
+
+//        cuenta2.mostrarInformacionCuentaCoriente();
+
+//        System.out.println("Ingrese saldo: ");
+//        double saldoNuevo = scanner.nextDouble();
+//        cuenta2.IngresarDinero(saldoNuevo);
+//        cuenta2.mostrarInformacionCuentaCoriente();
     }
 }
 

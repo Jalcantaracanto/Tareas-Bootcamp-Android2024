@@ -1,4 +1,4 @@
-package cl.CuentaBancaria.Clases;
+package cl.CuentaBancaria.clases;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;

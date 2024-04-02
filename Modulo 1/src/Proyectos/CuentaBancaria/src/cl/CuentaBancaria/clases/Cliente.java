@@ -1,4 +1,4 @@
-package cl.CuentaBancaria.Clases;
+package cl.CuentaBancaria.clases;
 
 import java.util.Scanner;
 
@@ -68,4 +68,3 @@ public class Cliente {
 
     }
 }
-

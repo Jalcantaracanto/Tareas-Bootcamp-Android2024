@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d763ba41-39c9-4a35-a496-31589ebcbec0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Veterinaria/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cafetera/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Cafetera/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cafetera/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cafetera/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cafetera/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cafetera/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cafetera/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cafetera/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cafetera/Cafetera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cafetera/Cafetera.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cafetera/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cafetera/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cafetera/src/cl/Cafetera/clases/Cafetera.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cafetera/src/cl/Cafetera/clases/Cafetera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CuentaBancaria/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CuentaBancaria/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CuentaBancaria/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CuentaBancaria/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CuentaBancaria/CuentaBancaria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CuentaBancaria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CuentaBancaria/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CuentaBancaria/src/cl/CuentaBancaria/Clases/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cl/CuentaBancaria/Clases/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CuentaBancaria/src/cl/CuentaBancaria/Clases/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cl/CuentaBancaria/Clases/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mascotas/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mascotas/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mascotas/src/cl/Mascotas/Class/Perro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mascotas/src/cl/Mascotas/Class/Perro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mascotas/src/cl/Mascotas/Class/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mascotas/src/cl/Mascotas/Class/Persona.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2deQq1GrvoY6vAdFKsoqHUuELOu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d763ba41-39c9-4a35-a496-31589ebcbec0" name="Changes" comment="" />
+      <created>1710366250669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710366250669</updated>
+    </task>
+    <servers />
+  </component>
+</project>

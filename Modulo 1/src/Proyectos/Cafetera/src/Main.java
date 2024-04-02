@@ -1,3 +1,5 @@
+package Proyectos.Cafetera.src;
+
 import cl.Cafetera.clases.Cafetera;
 
 import java.util.Scanner;
@@ -39,7 +41,7 @@ public class Main {
         cafetera.agregarCafe(agregar);
 
         System.out.println("Finalmente vaciaremos la cafetera.");
-        System.out.println("Presione ENTER para vaciar Cafetera");
+        System.out.println("Presione ENTER para vaciar Proyectos.Cafetera");
         scanner.nextLine();
         cafetera.vaciarCafetera();
         cafetera.getCantidadActual();

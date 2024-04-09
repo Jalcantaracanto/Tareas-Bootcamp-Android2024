@@ -1,12 +1,10 @@
 <div align="center" >
   <h1>Alke Wallet 🏦</h1>
 </div>
-Primer trabajo realizado para bootcamp fullstack android. Se inicio con Java para adquirir conocimientos en Programación Orientada a Objetos.
+Segundo trabajo realizado para bootcamp fullstack android. La segunda etapa consiste en realizar la base de datos para Alke Wallet.
 <div align="center" >
 </br>
-
-   ![Imagen](https://github.com/Jalcantaracanto/WalletJava/blob/master/assets/img/MenuInicial.png)
-   
+   ![Imagen](https://github.com/Jalcantaracanto/Tareas-Bootcamp-Android2024/blob/master/Modulo%203/Evaluación%20Integradora/Assets/MySQL.png)
 </div>
 
 # Descripción

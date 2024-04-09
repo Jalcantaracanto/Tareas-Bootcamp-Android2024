@@ -13,21 +13,24 @@ CREATE TABLE IF NOT EXISTS Coins (
 
 -- Tabla Usuarios
 CREATE TABLE IF NOT EXISTS Users(
-	user_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	tax_identification VARCHAR(50),
+	user_id INT PRIMARY KEY AUTO_INCREMENT,
+	tax_identification VARCHAR(50) NOT NULL,
     firstName VARCHAR(100) NOT NULL,
     lastName VARCHAR(100) NOT NULL,
     email VARCHAR (80) NOT NULL,
     user_password VARCHAR (100) NOT NULL
 );
 
--- Tabla Cuentas Corrientes
-CREATE TABLE IF NOT EXISTS checkingAccounts(
-	cheking_account_id INT PRIMARY KEY AUTO_INCREMENT,
+-- Tabla Cuentas Corrientes 
+CREATE TABLE IF NOT EXISTS CheckingAccounts(
+	checking_account_id INT PRIMARY KEY AUTO_INCREMENT,
+    account_type VARCHAR(50),
     balance DECIMAL (10,2) DEFAULT 0,
 	creation_date DATE NOT NULL,
+    coin_id INT,
     user_id INT,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (coin_id) REFERENCES Coins(coin_id)
 );
 
 -- Tabla Transacciones
@@ -38,11 +41,11 @@ CREATE TABLE IF NOT EXISTS Transactions(
     sender_user_id INT NOT NULL,
     receiver_user_id INT NOT NULL,
     coin_id INT NOT NULL,
-    cheking_account_id INT NOT NULL,
+    checking_account_id INT NOT NULL,
     FOREIGN KEY (sender_user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (receiver_user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (coin_id) REFERENCES Coins(coin_id),
-    FOREIGN KEY (cheking_account_id) REFERENCES checkingAccounts(cheking_account_id) ON DELETE CASCADE
+    FOREIGN KEY (checking_account_id) REFERENCES checkingAccounts(checking_account_id) ON DELETE CASCADE
 );
 
 -- Llenado de Datos
@@ -58,12 +61,14 @@ VALUES ('18.888.888-8', 'Javier', 'Alcántara', 'javier.alcantara.canto@gmail.co
 	   ('17.777.777-7', 'Nicole', 'Chavez', 'nicole@gmail.com', sha2('54321',256)),
        ('11.111.111-1', 'Maite', 'Escobar', 'maite@gmail.com', sha2('45678',256));
        
-INSERT INTO checkingAccounts( balance, creation_date, user_id)
-VALUES (100000,'2024-01-15','1'),
-	   (310000,'2024-01-15','2'),
-       (85000,'2024-01-15','3');
+INSERT INTO checkingAccounts( account_type, balance, creation_date , coin_id , user_id)
+VALUES ('Cuenta Vista',  100000, '2020-03-14', 1 , 1),
+	   ('Cuenta Corriente',  1000000, '2021-01-01', 2 , 1),
+	   ('Cuenta Vista',  50000, '2020-03-14', 1 , 2),
+	   ('Cuenta Corriente',  2000000, '2020-03-14', 2 , 2),
+	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3);
        
-INSERT INTO Transactions( amount , sender_user_id, receiver_user_id, coin_id, cheking_account_id)
+INSERT INTO Transactions( amount , sender_user_id, receiver_user_id, coin_id, checking_account_id)
 VALUES (10000,1,2,1,1),
        (20000,2,3,2,2),
        (50000,3,2,1,3),
@@ -75,6 +80,11 @@ FROM Transactions t
 JOIN Coins c ON t.coin_id = c.coin_id
 JOIN Users u ON t.sender_user_id = u.user_id
 WHERE u.user_id = 1;
+
+SELECT a.cheking_account_id AS 'Nro Cuenta', a.account_type AS 'Tipo Cuenta', c.coin_name AS 'Moneda'
+FROM CheckingAccounts a
+JOIN Coins c ON a.coin_id = c.coin_id
+WHERE a.user_id = 1;
 
 -- Consulta para obtener las transacciones realizadas por un usuario específico
 SELECT *
@@ -129,23 +139,34 @@ CHANGE COLUMN email electronic_mail VARCHAR(80) NOT NULL;
     A continuación realice un procedimiento almacenado para una transaccion segura, que verifica la existencia de los usuarios para realizar la transaccion.
 */
 DELIMITER //
-CREATE PROCEDURE Secure_Transaction()
-
+CREATE PROCEDURE Secure_Transaction(checking_account_id_sender INT, checking_account_id_receiver INT)
 BEGIN
-	START TRANSACTION;
-	IF EXISTS (SELECT user_id FROM Users WHERE user_id = 2) AND EXISTS (SELECT user_id FROM Users WHERE user_id = 3) THEN
-		INSERT INTO Transactions (amount, sender_user_id, receiver_user_id, coin_id, cheking_account_id)
-		VALUES (10, 1,2, 1, 1);
-		COMMIT;
-        SELECT 'Transferencia realizada con éxito' AS Mensaje;
-	ELSE
-		ROLLBACK;
-        SELECT 'No existir uno de los dos Usuarios' AS Mensaje;
-     END IF;
- END //
- 
+    DECLARE sender_coin_id INT;
+    DECLARE receiver_coin_id INT;    
+    DECLARE sender_user_id INT;
+    DECLARE receiver_user_id INT;
+
+    SELECT coin_id INTO sender_coin_id FROM CheckingAccounts WHERE checking_account_id = checking_account_id_sender;
+    SELECT coin_id INTO receiver_coin_id FROM CheckingAccounts WHERE checking_account_id = checking_account_id_receiver;
+    SELECT user_id INTO sender_user_id FROM checkingAccounts WHERE checking_account_id = checking_account_id_sender;
+    SELECT user_id INTO receiver_user_id FROM checkingAccounts WHERE checking_account_id = checking_account_id_receiver;
+
+    IF sender_coin_id IS NOT NULL AND receiver_coin_id IS NOT NULL THEN
+        IF sender_coin_id = receiver_coin_id THEN
+            START TRANSACTION;
+            INSERT INTO Transactions (amount, sender_user_id, receiver_user_id, coin_id, checking_account_id)
+            VALUES (100, sender_user_id, receiver_user_id, sender_coin_id, checking_account_id_sender);
+            COMMIT;
+            SELECT 'Transferencia realizada con éxito' AS Mensaje;
+        ELSE
+            SELECT 'Las cuentas no tienen el mismo tipo de moneda. Transferencia cancelada' AS Mensaje;
+        END IF;
+    ELSE
+        SELECT 'Al menos una de las cuentas no existe. Transferencia cancelada' AS Mensaje;
+    END IF;
+END //
 DELIMITER ;
-CALL Secure_Transaction();
+CALL Secure_Transaction(1,2);
 SELECT * FROM transactions;
 
 /*

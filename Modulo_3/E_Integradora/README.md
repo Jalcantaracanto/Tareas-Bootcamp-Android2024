@@ -4,7 +4,7 @@
 Segundo trabajo realizado para bootcamp fullstack android. La segunda etapa consiste en realizar la base de datos para Alke Wallet.
 <div align="center" >
 </br>
-   ![Imagen](https://github.com/Jalcantaracanto/Tareas-Bootcamp-Android2024/blob/master/Modulo%203/Evaluación%20Integradora/Assets/MySQL.png)
+   ![Imagen](https://github.com/Jalcantaracanto/Tareas-Bootcamp-Android2024/blob/master/Modulo_3/E_Integradora/Assets/MySQL.png)
 </div>
 
 # Descripción

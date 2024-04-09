@@ -4,12 +4,14 @@
 Segundo trabajo realizado para bootcamp fullstack android. La segunda etapa consiste en realizar la base de datos para Alke Wallet.
 <div align="center" >
 </br>
-   ![Imagen](https://github.com/Jalcantaracanto/Tareas-Bootcamp-Android2024/blob/master/Modulo_3/E_Integradora/Assets/MySQL.png)
+  
+  <img src="https://github.com/Jalcantaracanto/Tareas-Bootcamp-Android2024/blob/master/Modulo_3/E_Integradora/Assets/MySQL.png" width="200" />
+  
 </div>
 
 # Descripción
 <p align="justify">
-A través de una solicitud, han solicitado crear una wallet digital. La problematica a resolver es brindar a los usuarios una solución segura y fácil de usar para administrar sus activos financieros de manera digital. Esta wallet permitirá a los usuarios realizar transacciones dentro de la aplicación.
+Han solicitado crear la Base de datos para Alke Wallet. La problematica a resolver es realizar el diseño de una base de datos relacional para gestionar un sistema de una Wallet, la cual permitiria almacenar, gestionar fondos, realizar transacciones y ver el historial de transacciones.
 </p>
 
 
@@ -17,65 +19,31 @@ A través de una solicitud, han solicitado crear una wallet digital. La problema
 
  <ul>
     <li>
-    💰 Administrar Fondos
+    💰 Coherencia de los datos
     </li>
     <li>
-     💵 Conversión Moneda
+     💵 Integridad de los datos
    </li>
  </ul>
-<strong>Requerimientos Técnicos:</strong>
 
- <ul>
-    <li>
-    📓 Java - implementando POO
-    </li>
-    <li>
-     📝 Diagramas de Clase
-   </li>
-   <li>
-     🧪 Pruebas Unitarias
-   </li>
- </ul>
+ # Modelo Relacional
+<p align="justify">
+El modelo lo he realizado con MySQL Workbench, el cual demuestra el como están unidas las tablas.
+</p>
 
 # Estado del Proyecto
 <p align="justify">
-Actualmente, el proyecto se encuentra finalizado en su primera etapa. Aun así con el pasar del bootcamp este proyecto ira cambiando, ya que a medida avancemos en la materia, irán solicitando nuevas implementaciones. Iré actualizando esto a medida el proyecto necesité nuevos cambios.
+Actualmente, la creación de la base de datos se encuentra finalizada en su primera etapa. Es posible que a futuro requieran cambios cuando se implemente Android y Kotlin.
 </p>
 
-# Caracteristicas de la aplicación y demostración
-
-
-<div align="center" >
-
-   ![Demostración1](https://github.com/Jalcantaracanto/WalletJava/blob/master/assets/img/muestra1.png)
-
-  <p align="justify"> Dispone de un login, que busca al usuario mediante el correo y verifica que la contraseña corresponda también al usuario. Con esto agregamos un nivel de seguridad a la app, ya que no cualquiera podrá ingresar a la plataforma sin tus datos personales.</p>
-
-![Demostración2](https://github.com/Jalcantaracanto/WalletJava/blob/master/assets/img/muestra2.png)
-
-<p align="justify">Incluye un apartado para poder visualizar el saldo disponible que tiene el usuario en su wallet digital. Así podrá saber si puede o no retirar saldo.</p>
-
-
-![Demostración3](https://github.com/Jalcantaracanto/WalletJava/blob/master/assets/img/muestra4.png)
-
-<p align="justify">Dentro de las opciones, existe un conversor, el cual te permitirá saber tu saldo en otras divisas, para tener una noción de lo que vale el peso chileno en otras divisas disponibles.</p>
-
-![Demostración4](https://github.com/Jalcantaracanto/WalletJava/blob/master/assets/img/muestra3.png)
-
-<p align="justify">Otra de las funciones disponibles en la aplicación, es el ingresar o retirar saldo de nuestra wallet / cuenta bancaria, en donde te preguntará dependiendo de qué opción elijas, para luego preguntar con cuánto saldo es que se hará la acción indicada.</p>
-
-</div>
 
 # Tecnologias Utilizadas
  <ul>
     <li>
-    📓 Java
+    📓 MySQL
     </li>
     <li>
-     🟩 POO
-   </li>
-   <li>
-     ✅ JUnit
+     🟩 SQL
    </li>
  </ul>
 

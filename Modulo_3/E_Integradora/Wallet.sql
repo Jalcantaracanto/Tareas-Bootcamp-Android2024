@@ -65,18 +65,16 @@ INSERT INTO checkingAccounts( account_type, balance, creation_date , coin_id , u
 VALUES ('Cuenta Vista',  100000, '2020-03-14', 1 , 1),
 	   ('Cuenta Corriente',  1000000, '2021-01-01', 2 , 1),
 	   ('Cuenta Vista',  50000, '2020-03-14', 1 , 2),
-	   ('Cuenta Corriente',  2000000, '2020-03-14', 2 , 2),
-	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3),
-	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3),
-	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3),
-	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3),
-	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3);
+	   ('Cuenta Corriente',  2000000, '2020-03-14', 2 , 2);
        
 INSERT INTO Transactions( amount , sender_user_id, receiver_user_id, coin_id, checking_account_id)
 VALUES (10000,1,2,1,1),
        (20000,2,3,2,2),
        (50000,3,2,1,3),
-       (10,3,2,1,3);
+       (20000,2,1,1,3),
+       (15000,3,2,1,3),
+       (1500,3,2,1,3),
+       (3000,3,2,1,3);
 
 -- Consulta para obtener el nombre de la moneda elegida por un usuario específico
 SELECT c.coin_name

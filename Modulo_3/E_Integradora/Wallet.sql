@@ -66,6 +66,10 @@ VALUES ('Cuenta Vista',  100000, '2020-03-14', 1 , 1),
 	   ('Cuenta Corriente',  1000000, '2021-01-01', 2 , 1),
 	   ('Cuenta Vista',  50000, '2020-03-14', 1 , 2),
 	   ('Cuenta Corriente',  2000000, '2020-03-14', 2 , 2),
+	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3),
+	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3),
+	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3),
+	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3),
 	   ('Cuenta Vista',  10000, '2020-03-14', 1 , 3);
        
 INSERT INTO Transactions( amount , sender_user_id, receiver_user_id, coin_id, checking_account_id)
@@ -81,7 +85,7 @@ JOIN Coins c ON t.coin_id = c.coin_id
 JOIN Users u ON t.sender_user_id = u.user_id
 WHERE u.user_id = 1;
 
-SELECT a.cheking_account_id AS 'Nro Cuenta', a.account_type AS 'Tipo Cuenta', c.coin_name AS 'Moneda'
+SELECT a.checking_account_id AS 'Nro Cuenta', a.account_type AS 'Tipo Cuenta', c.coin_name AS 'Moneda'
 FROM CheckingAccounts a
 JOIN Coins c ON a.coin_id = c.coin_id
 WHERE a.user_id = 1;
@@ -114,6 +118,8 @@ UPDATE Users
 SET email = 'javier@gmail.com'
 WHERE tax_identification = '18.888.888-8';
 SET SQL_SAFE_UPDATES = 1;
+
+SELECT * FROM Users;
 
 -- Sentencia para eliminar los datos de una transacción (eliminado de la fila completa)
 DELETE FROM Transactions
@@ -166,6 +172,7 @@ BEGIN
     END IF;
 END //
 DELIMITER ;
+CALL Secure_Transaction(1,3);
 CALL Secure_Transaction(1,2);
 SELECT * FROM transactions;
 

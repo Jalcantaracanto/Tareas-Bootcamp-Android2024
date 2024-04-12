@@ -71,9 +71,8 @@ Actualmente, la creación de la base de datos se encuentra finalizada en su prim
 # Conclusión
 
 <p align="justify">
-En conclusión, "Alke Wallet" es un proyecto desarrollado como parte del bootcamp fullstack de Android, que proporciona una solución segura y conveniente para administrar activos financieros digitalmente. Implementado en Java y utilizando Programación Orientada a Objetos (POO), este proyecto aborda los requisitos otorgados y la conversión de moneda. A través de su interfaz, los usuarios pueden realizar transacciones, consultar sus saldos y realizar cambios de moneda. Aunque actualmente se encuentra en sus primeras etapas, se espera que evolucione a medida que avance el bootcamp.
+En conclusión, "Alke Wallet Data Base" garantiza la coherencia e integridad de datos, la cual proporciona flexibilidad en la gestión de transacciones y cuentas. El agregado de una tabla adicional y la asociación de tipos de moneda a las cuentas aseguran un manejo preciso y eficientes para las operaciones. Gracias a esto se sientan las bases para futuras integraciones con Android, Java u Kotlin, pudiendo haber posibles ajustes. 
 </p>
-
 <!--
 *[Acceso al proyecto](#acceso-proyecto)
 s

@@ -3,7 +3,7 @@
   <p align="justify">
     Segundo trabajo realizado para bootcamp fullstack android. La segunda etapa consiste en realizar la base de datos para Alke Wallet.
   </p>
-  <img src="https://github.com/Jalcantaracanto/Tareas-Bootcamp-Android2024/blob/master/Modulo_3/E_Integradora/Assets/MySQL.png" width="200" />
+  <img src="https://github.com/Jalcantaracanto/Tareas-Bootcamp-Android2024/blob/Modulo3/Modulo_3/E_Integradora/Assets/MySQL.png" width="200" />
 </div>
 
 # Descripción
@@ -27,7 +27,7 @@
     <p align="justify">
       El modelo fue el siguiente:
     </p>
-   <img src="https://github.com/Jalcantaracanto/Tareas-Bootcamp-Android2024/blob/master/Modulo_3/E_Integradora/Modelo Relacional.png" width="500" />
+   <img src="https://github.com/Jalcantaracanto/Tareas-Bootcamp-Android2024/blob/Modulo3/Modulo_3/E_Integradora/Modelo Relacional.png" width="500" />
    
    <div align="justify">
      <p>

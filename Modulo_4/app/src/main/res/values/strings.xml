@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AlkeWallet</string>
+    <string name="alreadyHaveAnAccount">Ya tengo cuenta</string>
+    <string name="loginpage_title">Logea y empieza a transferir!</string>
+    <string name="crear_cuenta_nueva">Crear cuenta nueva</string>
+    <string name="email">Email</string>
+    <string name="pass">Contraseña</string>
+    <string name="forgetPassword">Olvidaste tu contraseña?</string>
+</resources>

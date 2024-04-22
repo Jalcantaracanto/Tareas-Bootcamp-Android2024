@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RequestMoney"
-    android:background="@color/white">
+    tools:context=".RequestMoney">
 
     <TextView
         android:id="@+id/textView4"
@@ -15,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50sp"
         android:fontFamily="jua"
-        android:text="Ingresar Dinero"
-        android:textSize="20sp"
+        android:text="Enviar Dinero"
         android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,8 +25,8 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50sp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="50sp"
         android:contentDescription="Back"
         android:src="@drawable/arrow_back"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +64,7 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/pp4"
+                android:src="@drawable/pp_empty"
                 tools:contentDescription="TODO" />
         </androidx.cardview.widget.CardView>
 
@@ -83,21 +81,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reem Khaled"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/jua"
+                android:text="Yara Khalil"
+                android:textColor="@color/black"
                 android:textSize="14dp"
-                android:layout_marginBottom="5dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="reem_1993@gmail.com"
-                android:textColor="@color/grey"
-                android:textStyle="bold"
                 android:fontFamily="@font/jua"
-                android:textSize="12dp"/>
+                android:text="Yara__khalil@gmail.com"
+                android:textColor="@color/grey"
+                android:textSize="12dp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
@@ -106,8 +104,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
         android:fontFamily="@font/jua"
-        android:text="Cantidad a ingresar"
+        android:text="Cantidad a transferir"
         android:textColor="@color/black"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="@+id/txtIngreso"
@@ -139,17 +138,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
         android:fontFamily="@font/jua"
         android:text="Nota de Transferencia"
         android:textColor="@color/black"
         android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
         app:layout_constraintTop_toBottomOf="@+id/txtIngreso" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout6"
+        android:id="@+id/textInputLayout7"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginHorizontal="10dp"
@@ -185,10 +185,10 @@
         android:layout_height="49dp"
         android:layout_marginHorizontal="15sp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/blueButton"
+        android:backgroundTint="@color/green"
         android:fontFamily="@font/jua"
-        android:text="Ingresar Dinero"
-        android:textColor="@color/white"
+        android:text="Enviar Dinero"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -197,17 +197,15 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:layout_width="16dp"
-        android:layout_height="16dp"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
         android:layout_marginEnd="160dp"
-        android:rotation="180"
         android:src="@drawable/send_icon"
         app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintTop_toTopOf="@+id/button"
-        app:tint="@color/white" />
-
+        app:tint="@color/black" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

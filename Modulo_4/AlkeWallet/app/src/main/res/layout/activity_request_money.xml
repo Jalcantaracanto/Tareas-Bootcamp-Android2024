@@ -207,8 +207,5 @@
         app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintTop_toTopOf="@+id/button"
         app:tint="@color/white" />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 

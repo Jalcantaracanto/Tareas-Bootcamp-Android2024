@@ -13,7 +13,7 @@
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="Header"
+        android:contentDescription="@string/header"
         android:scaleType="fitXY"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginBottom="37dp"
         android:fontFamily="@font/jua"
-        android:text="Inicio"
+        android:text="@string/home_inicio"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView15"
@@ -56,7 +56,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:srcCompat="@drawable/notifications__icon" />
+        app:srcCompat="@drawable/notifications__icon"
+        android:contentDescription="@string/campaign_notification" />
 
     <TextView
         android:id="@+id/textView13"
@@ -65,7 +66,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/jua"
-        android:text="$124.57"
+        android:text="@string/currency"
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
@@ -79,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jua"
-        android:text="Balance Total"
+        android:text="@string/total_balance"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
@@ -91,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:fontFamily="@font/jua"
-        android:text="Hola, Amanda!"
+        android:text="@string/hello_name"
         android:textColor="#B1DBFE"
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="@+id/textView14"
@@ -106,7 +107,7 @@
         android:layout_marginTop="32dp"
         android:backgroundTint="#72DB31"
         android:fontFamily="@font/jua"
-        android:text="Enviar Dinero"
+        android:text="@string/send_money"
         android:textColor="@color/black"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toStartOf="@+id/button6"
@@ -122,7 +123,7 @@
         android:layout_marginEnd="15dp"
         android:backgroundTint="#63B8FC"
         android:fontFamily="@font/jua"
-        android:text="Ingresar Dinero"
+        android:text="@string/get_money"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,7 +137,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/jua"
-        android:text="Ultimas transacciones"
+        android:text="@string/last_transaccion_text"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
@@ -152,7 +153,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
         app:layout_constraintVertical_bias="0.30"
-        app:srcCompat="@drawable/empty_illustration" />
+        app:srcCompat="@drawable/empty_illustration"
+        android:contentDescription="@string/not_transactions_text" />
 
     <TextView
         android:id="@+id/textView23"
@@ -161,7 +163,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="15dp"
         android:fontFamily="@font/jua"
-        android:text="No hay transacciones registradas!"
+        android:text="@string/no_hay_transacciones_registradas"
         android:textColor="#8C8C8C"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView9"

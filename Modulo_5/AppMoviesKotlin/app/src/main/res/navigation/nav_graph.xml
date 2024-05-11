@@ -9,5 +9,14 @@
         android:id="@+id/homePage"
         android:name="com.example.appmovieskotlin.fragments.HomePage"
         android:label="fragment_home_page"
-        tools:layout="@layout/fragment_home_page" />
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_detailPage"
+            app:destination="@id/detailPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPage"
+        android:name="com.example.appmovieskotlin.fragments.DetailPage"
+        android:label="fragment_detail_page"
+        tools:layout="@layout/fragment_detail_page" />
 </navigation>

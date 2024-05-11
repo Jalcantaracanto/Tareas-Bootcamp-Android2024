@@ -28,35 +28,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-//    private fun setDownloadPokemonImage(pokemon: Pokemon){
-//
-//        binding.pbImg.visibility = View.VISIBLE
-//        Glide.with(this).load(pokemon.imageUrl).listener(object : RequestListener<Drawable> {
-//            override fun onLoadFailed(
-//                e: GlideException?,
-//                model: Any?,
-//                target: Target<Drawable>,
-//                isFirstResource: Boolean
-//            ): Boolean {
-//                binding.pbImg.visibility = View.GONE
-//                binding.imgPokemon.setImageResource(R.drawable.ic_image_not_supported_black)
-//                return false
-//            }
-//
-//            override fun onResourceReady(
-//                resource: Drawable,
-//                model: Any,
-//                target: Target<Drawable>?,
-//                dataSource: DataSource,
-//                isFirstResource: Boolean
-//            ): Boolean {
-//                binding.pbImg.visibility = View.GONE
-//                return false
-//            }
-//        })
-//            .error(R.drawable.ic_image_not_supported_black)
-//            .into(binding.imgPokemon);
-//    }
 
     // https://image.tmdb.org/t/p/w154/9bIvXIAf2i7NRMnrGowMhJJzPuY.jpg
 }

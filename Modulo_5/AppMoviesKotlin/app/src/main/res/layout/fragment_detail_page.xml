@@ -36,12 +36,12 @@
         android:id="@+id/description_movie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/acme"
         android:layout_marginHorizontal="15dp"
+        android:fontFamily="@font/acme"
+        android:justificationMode="inter_word"
         android:text="DESCRIPCION DE LA PELICULA"
         android:textColor="@color/text_color_app"
         android:textSize="15sp"
-        android:justificationMode="inter_word"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,12 +59,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_volver"
+        android:id="@+id/btn_share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/btn_back"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/text_color_app"
+        android:fontFamily="@font/acme"
+        android:text="Share"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toEndOf="@+id/btn_back" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

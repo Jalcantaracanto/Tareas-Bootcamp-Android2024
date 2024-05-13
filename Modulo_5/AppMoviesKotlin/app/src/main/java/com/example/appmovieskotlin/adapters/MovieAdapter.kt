@@ -40,9 +40,6 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
     override fun onBindViewHolder(holder: MovieAdapter.MovieViewHolder, position: Int) {
         val movie: Movie = movies[position]
         holder.bind(movie)
-
-
-
     }
 
     override fun getItemCount(): Int {

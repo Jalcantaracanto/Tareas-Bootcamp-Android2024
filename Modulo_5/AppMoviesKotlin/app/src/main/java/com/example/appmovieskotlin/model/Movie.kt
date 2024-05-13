@@ -3,24 +3,6 @@ package com.example.appmovieskotlin.model
 import android.os.Parcel
 import android.os.Parcelable
 
-enum class MovieCategory {
-    ACCION,
-    COMEDIA,
-    DRAMA,
-    TERROR,
-    ROMANCE,
-    AVENTURA,
-    THRILLER,
-    FANTASIA,
-    CIENCIA_FICCION,
-    DOCUMENTAL,
-    OTRO,
-    FAMILIA,
-    ANIMACION,
-    SUSPENSO,
-    CRIMEN
-}
-
 data class Movie(
     val id: String,
     val title: String,
@@ -28,9 +10,57 @@ data class Movie(
     val category: Array<MovieCategory>,
     val overview: String,
     val poster: String,
-    val duration: Int,
-): Parcelable {
-    companion object {
+    val duration: Int
+) : Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        TODO("category"),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readInt()
+    )
+
+    enum class MovieCategory {
+        ACCION,
+        COMEDIA,
+        DRAMA,
+        TERROR,
+        ROMANCE,
+        AVENTURA,
+        THRILLER,
+        FANTASIA,
+        CIENCIA_FICCION,
+        DOCUMENTAL,
+        OTRO,
+        FAMILIA,
+        ANIMACION,
+        SUSPENSO,
+        CRIMEN
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(id)
+        parcel.writeString(title)
+        parcel.writeString(year)
+        parcel.writeStringArray(category.map { it.name }.toTypedArray())
+        parcel.writeString(overview)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Movie> {
+        override fun createFromParcel(parcel: Parcel): Movie {
+            return Movie(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Movie?> {
+            return arrayOfNulls(size)
+        }
+
         val dataMovies = mutableListOf<Movie>(
             Movie(
                 id = "m01",
@@ -281,11 +311,4 @@ data class Movie(
         val dataEmpty = mutableListOf<Movie>()
     }
 
-    override fun describeContents(): Int {
-        TODO("Not yet implemented")
-    }
-
-    override fun writeToParcel(dest: Parcel, flags: Int) {
-        TODO("Not yet implemented")
-    }
 }

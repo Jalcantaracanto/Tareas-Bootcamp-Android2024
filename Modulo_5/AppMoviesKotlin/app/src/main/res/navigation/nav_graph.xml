@@ -21,7 +21,7 @@
         tools:layout="@layout/fragment_detail_page">
         <argument
             android:name="movie"
-            app:argType="com.example.appmovieskotlin.entities.Movie" />
+            app:argType="com.example.appmovieskotlin.model.Movie" />
         <action
             android:id="@+id/action_detailPage_to_homePage"
             app:destination="@id/homePage" />

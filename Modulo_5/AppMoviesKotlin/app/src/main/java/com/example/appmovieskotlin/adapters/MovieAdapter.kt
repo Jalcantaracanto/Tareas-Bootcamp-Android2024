@@ -5,8 +5,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -14,7 +12,7 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.example.appmovieskotlin.R
 import com.example.appmovieskotlin.databinding.ItemMoviesBinding
-import com.example.appmovieskotlin.entities.Movie
+import com.example.appmovieskotlin.model.Movie
 
 private val TAG = MovieAdapter::class.java.simpleName
 
@@ -42,6 +40,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
     override fun onBindViewHolder(holder: MovieAdapter.MovieViewHolder, position: Int) {
         val movie: Movie = movies[position]
         holder.bind(movie)
+
 
 
     }

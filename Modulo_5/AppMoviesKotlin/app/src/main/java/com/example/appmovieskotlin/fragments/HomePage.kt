@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appmovieskotlin.R
 import com.example.appmovieskotlin.adapters.MovieAdapter
 import com.example.appmovieskotlin.databinding.FragmentHomePageBinding
-import com.example.appmovieskotlin.entities.Movie
+import com.example.appmovieskotlin.model.Movie
 
 
 class HomePage : Fragment() {

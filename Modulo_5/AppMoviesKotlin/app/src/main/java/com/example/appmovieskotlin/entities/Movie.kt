@@ -1,5 +1,8 @@
 package com.example.appmovieskotlin.entities
 
+import android.os.Parcel
+import android.os.Parcelable
+
 enum class MovieCategory {
     ACCION,
     COMEDIA,
@@ -26,7 +29,7 @@ data class Movie(
     val overview: String,
     val poster: String,
     val duration: Int,
-) {
+): Parcelable {
     companion object {
         val dataMovies = mutableListOf<Movie>(
             Movie(
@@ -276,5 +279,13 @@ data class Movie(
         )
 
         val dataEmpty = mutableListOf<Movie>()
+    }
+
+    override fun describeContents(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        TODO("Not yet implemented")
     }
 }

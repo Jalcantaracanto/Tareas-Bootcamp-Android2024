@@ -1,6 +1,7 @@
 package com.example.appmovieskotlin.adapters
 
 import android.graphics.drawable.Drawable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +18,7 @@ import com.example.appmovieskotlin.entities.Movie
 
 private val TAG = MovieAdapter::class.java.simpleName
 
-class MovieAdapter  : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
+class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     lateinit var onItemClickListener: (Movie) -> Unit
 
@@ -41,7 +42,6 @@ class MovieAdapter  : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
     override fun onBindViewHolder(holder: MovieAdapter.MovieViewHolder, position: Int) {
         val movie: Movie = movies[position]
         holder.bind(movie)
-
 
 
     }
@@ -91,6 +91,13 @@ class MovieAdapter  : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
                 bindingItem.durationMovie.text = "Duración: $duration min"
                 bindingItem.descriptionMovie.text = overview
 
+                bindingItem.btnDetail.setOnClickListener() {
+                    if (::onItemClickListener.isInitialized)
+                        onItemClickListener(movie)
+                    else {
+                        Log.e(TAG, "onItemClickList is not initialized")
+                    }
+                }
 
             }
 

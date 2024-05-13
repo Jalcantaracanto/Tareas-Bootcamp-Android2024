@@ -1,12 +1,19 @@
 package com.example.appmovieskotlin.fragments
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
 import com.example.appmovieskotlin.R
 import com.example.appmovieskotlin.databinding.FragmentDetailPageBinding
+import com.example.appmovieskotlin.entities.Movie
 
 class DetailPage : Fragment() {
 
@@ -22,8 +29,27 @@ class DetailPage : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail_page, container, false)
+        val binding = FragmentDetailPageBinding.inflate(inflater, container, false)
+
+        val movie = arguments?.getParcelable<Movie>("movie")
+        val imageUrl = arguments?.getString("imageUrl")
+
+        Glide.with(this)
+            .load(imageUrl)
+            .into(binding.posterDetail)
+
+        binding.titleMovieDescription.text = movie?.title
+        binding.descriptionMovie.text = movie?.overview
+
+        binding.btnVolver.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
 

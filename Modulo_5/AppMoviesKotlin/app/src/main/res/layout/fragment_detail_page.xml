@@ -83,7 +83,7 @@
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toEndOf="@+id/btn_back"
         app:layout_constraintTop_toTopOf="@+id/btn_back"
-        app:maxImageSize="30dp"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:maxImageSize="30dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/second_floating"
@@ -95,9 +95,7 @@
         app:layout_constraintBottom_toTopOf="@+id/first_floating"
         app:layout_constraintEnd_toEndOf="@+id/first_floating"
         app:layout_constraintStart_toStartOf="@+id/first_floating"
-        app:maxImageSize="30dp">
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:maxImageSize="30dp" />
 
     <TextView
         android:id="@+id/second_floating_text"

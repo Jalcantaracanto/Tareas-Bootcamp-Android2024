@@ -67,10 +67,52 @@
         android:fontFamily="@font/acme"
         android:text="Share"
         android:textSize="20sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_back"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/first_floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toEndOf="@+id/btn_back" />
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="@+id/btn_back"
+        app:maxImageSize="30dp"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/second_floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/baseline_email_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/first_floating"
+        app:layout_constraintEnd_toEndOf="@+id/first_floating"
+        app:layout_constraintStart_toStartOf="@+id/first_floating"
+        app:maxImageSize="30dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <TextView
+        android:id="@+id/second_floating_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/acme"
+        android:text="Send Email"
+        android:textColor="@color/text_color_app"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/second_floating"
+        app:layout_constraintEnd_toStartOf="@+id/second_floating"
+        app:layout_constraintTop_toTopOf="@+id/second_floating" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

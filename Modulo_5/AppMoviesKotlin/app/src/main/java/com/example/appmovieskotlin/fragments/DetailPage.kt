@@ -42,6 +42,8 @@ class DetailPage : Fragment() {
 
     fun initUI(movie: Movie) {
 
+        var isVisible = false
+
         binding.titleMovieDescription.text = movie.title
         binding.descriptionMovie.text = movie.overview
 
@@ -51,6 +53,24 @@ class DetailPage : Fragment() {
 
         binding.btnBack.setOnClickListener {
             requireActivity().onBackPressed()
+        }
+
+        binding.firstFloating.setOnClickListener {
+            if (isVisible) {
+                binding.secondFloating.visibility = View.GONE
+                binding.secondFloatingText.visibility = View.GONE
+                isVisible = false
+            } else {
+                binding.secondFloating.visibility = View.VISIBLE
+                binding.secondFloatingText.visibility = View.VISIBLE
+                isVisible = true
+            }
+
+
+        }
+
+        binding.secondFloating.setOnClickListener {
+            sendEmailMovie(movie)
         }
 
         setDownloadMovieImages(movie)
